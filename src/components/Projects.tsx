@@ -7,35 +7,12 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import React from "react";
-import sampleImg from "../assets/sampleWebsite.png";
-
-const images = [
-  {
-    label: "Youtube",
-    link: "https://www.youtube.com/",
-    img: sampleImg,
-  },
-  {
-    label: "Google",
-    link: "https://www.google.com/",
-    img: sampleImg,
-  },
-  {
-    label: "Gmail",
-    link: "https://www.gmail.com/",
-    img: sampleImg,
-  },
-  {
-    label: "Github",
-    link: "https://www.github.com/",
-    img: sampleImg,
-  },
-];
+import { useState } from "react";
+import websiteList from "../data/websiteList";
 
 const Projects = () => {
-  const [activeImage, setActiveImage] = React.useState(0);
-  const maxImages = images.length;
+  const [activeImage, setActiveImage] = useState(0);
+  const maxImages = websiteList.length;
 
   const handleNext = () => {
     setActiveImage((prevActiveStep) => prevActiveStep + 1);
@@ -53,7 +30,6 @@ const Projects = () => {
       >
         Explore My Projects!
       </Typography>
-      {/* TODO Add the websites */}
       <Container maxWidth="xs">
         <Paper
           square
@@ -67,14 +43,14 @@ const Projects = () => {
             color: "white",
           }}
         >
-          <Typography>{images[activeImage].label}</Typography>
+          <Typography>{websiteList[activeImage].label}</Typography>
         </Paper>
-        <Link href={images[activeImage].link} target="_blank">
+        <Link href={websiteList[activeImage].link} target="_blank">
           <Box sx={{ height: 250, maxWidth: 400, width: "100%" }}>
             <Box
               component="img"
               alt="Image"
-              src={images[activeImage].img}
+              src={websiteList[activeImage].img}
               sx={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </Box>
