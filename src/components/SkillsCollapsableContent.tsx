@@ -1,5 +1,5 @@
 import { Box, Collapse, Grid, ListItemText } from "@mui/material";
-import { ISkillData } from "../data/skillData";
+import { ISkillData } from "../data/skillDataList";
 import ListItemWithIcon from "./common/ListItemWithIcon";
 
 interface Props {

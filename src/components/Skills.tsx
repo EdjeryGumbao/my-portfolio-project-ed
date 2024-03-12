@@ -8,11 +8,11 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  ListSubheader,
   Stack,
+  Typography,
 } from "@mui/material";
 import { useState } from "react";
-import skillDataList from "../data/skillData";
+import skillDataList from "../data/skillDataList";
 import SkillsCollapsableContent from "./SkillsCollapsableContent";
 
 const Skills = () => {
@@ -29,6 +29,9 @@ const Skills = () => {
   };
   return (
     <Box my={30}>
+      <Typography variant="h4" sx={{ textAlign: "center", fontWeight: "bold" }}>
+        Skills
+      </Typography>
       <List
         sx={{
           width: "100%",
@@ -38,7 +41,6 @@ const Skills = () => {
           margin: "auto",
         }}
         component="nav"
-        subheader={<ListSubheader component="div">Skills</ListSubheader>}
       >
         <Stack direction="row">
           <ListItemButton onClick={handleFirstCol}>
