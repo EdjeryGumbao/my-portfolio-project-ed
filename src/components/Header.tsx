@@ -20,9 +20,9 @@ const Header = () => {
           >
             <Box
               component="img"
-              style={{ maxWidth: "80%", height: "auto" }}
               alt="header-person"
               src={headerPerson}
+              sx={{ width: "80%", height: "auto", objectFit: "cover" }}
             />
           </Box>
         </Grid>
