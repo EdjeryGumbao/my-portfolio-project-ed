@@ -23,7 +23,7 @@ const Projects = () => {
   };
 
   return (
-    <Box component="div" sx={{ my: 15 }}>
+    <Box component="div" my={15}>
       <Typography
         variant="h4"
         sx={{ mb: 10, textAlign: "center", fontWeight: "bold" }}

@@ -6,7 +6,7 @@ const paragraphTextIndent = 50;
 
 const About = () => {
   return (
-    <Box component="div" sx={{ my: 15 }}>
+    <Box component="div" my={15}>
       <Grid
         container
         px={{ xs: 5, lg: 25 }}
