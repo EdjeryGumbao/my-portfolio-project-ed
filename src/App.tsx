@@ -1,4 +1,5 @@
 import { Box, CssBaseline, Toolbar } from "@mui/material";
+import About from "./components/About";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Projects />
       <Skills />
+      <About />
     </Box>
   );
 }
