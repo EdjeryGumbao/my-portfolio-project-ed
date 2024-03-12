@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import headerPerson from "../assets/header-person.png";
 
 const Header = () => {
@@ -10,19 +10,39 @@ const Header = () => {
         backgroundColor: "lightgray",
       }}
     >
-      <Box sx={{ marginLeft: "5rem" }}>
-        <img
-          src={headerPerson}
-          alt="header-person"
-          style={{ maxWidth: "70%", height: "auto" }}
-        />
-      </Box>
-      <Box>
-        <Typography variant="h6">Edjery Gumbao</Typography>
-        <Typography variant="h3">
-          Passionately Crafting Software Solutions
-        </Typography>
-      </Box>
+      <Grid container alignItems="center" pl={10}>
+        <Grid item xs={10} lg={5}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Box
+              component="img"
+              style={{ maxWidth: "80%", height: "auto" }}
+              alt="header-person"
+              src={headerPerson}
+            />
+          </Box>
+        </Grid>
+        <Grid item xs={10} lg={7}>
+          <Box sx={{ textAlign: { xs: "center", md: "left" }, my: { xs: 5 } }}>
+            <Typography variant="h6" sx={{ fontSize: { xs: 30, md: 20 } }}>
+              Edjery Gumbao
+            </Typography>
+            <Divider
+              sx={{
+                mb: { xs: 3, lg: 0 },
+                display: { xs: "block", md: "none" },
+              }}
+            />
+            <Typography variant="h3" sx={{ fontWeight: "bold" }}>
+              Passionately Crafting Software Solutions
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
     </Box>
   );
 };
