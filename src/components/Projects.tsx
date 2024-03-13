@@ -23,7 +23,7 @@ const Projects = () => {
   };
 
   return (
-    <Box maxWidth={1200} mx="auto" my={15} px={5}>
+    <Box>
       <Typography
         variant="h4"
         sx={{ mb: 10, textAlign: "center", fontWeight: "bold" }}

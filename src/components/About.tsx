@@ -6,7 +6,7 @@ const paragraphTextIndent = 50;
 
 const About = () => {
   return (
-    <Box maxWidth={1200} mx="auto" my={15} px={5}>
+    <Box>
       <Grid container spacing={10} sx={{ textAlign: "left" }}>
         <Grid item xs={12} md={6} lg={6}>
           <Typography

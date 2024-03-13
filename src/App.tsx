@@ -1,6 +1,7 @@
 import {
   Box,
   CssBaseline,
+  Stack,
   ThemeProvider,
   Toolbar,
   createTheme,
@@ -41,13 +42,21 @@ function App() {
       <ThemeProvider theme={theme}>
         <Box>
           <CssBaseline />
-          <Navbar />
+          <Box component="div" id="Home">
+            <Navbar />
+          </Box>
           <Toolbar />
           <Header />
-          <Projects />
-          <Skills />
-          <About />
-          <Contact />
+          <Stack maxWidth={1200} mx="auto" px={10} spacing={20}>
+            <Box component="div" id="Projects" />
+            <Projects />
+            <Box component="div" id="Skills" />
+            <Skills />
+            <Box component="div" id="About" />
+            <About />
+            <Box component="div" id="Contact" />
+            <Contact />
+          </Stack>
           <Footer />
         </Box>
       </ThemeProvider>

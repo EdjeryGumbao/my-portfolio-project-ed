@@ -28,7 +28,7 @@ const Skills = () => {
     if (open1stCol) setOpen1stCol(false);
   };
   return (
-    <Box my={30}>
+    <Box>
       <Typography variant="h4" sx={{ textAlign: "center", fontWeight: "bold" }}>
         Skills
       </Typography>

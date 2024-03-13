@@ -2,7 +2,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Box,
-  Button,
   Drawer,
   Grid,
   IconButton,
@@ -15,6 +14,7 @@ import {
 } from "@mui/material";
 
 import { useState } from "react";
+import ScrollToSectionButton from "./utility/ScrollToSectionButton";
 import ToggleColorMode from "./utility/ToggleColorMode";
 
 const drawerWidth = 240;
@@ -55,11 +55,7 @@ const Navbar = () => {
               <Box>
                 <Box sx={{ display: { xs: "none", sm: "inline" } }}>
                   {navItems.map((item) => (
-                    <Button key={item}>
-                      <Typography variant="body2" color="default">
-                        {item}
-                      </Typography>
-                    </Button>
+                    <ScrollToSectionButton sectionId={item} text={item} />
                   ))}
                 </Box>
                 <ToggleColorMode />

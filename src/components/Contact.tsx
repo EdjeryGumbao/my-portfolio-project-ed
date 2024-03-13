@@ -12,7 +12,7 @@ import {
 
 const Contact = () => {
   return (
-    <Box maxWidth={1200} mx="auto" my={15} px={5}>
+    <Box>
       <Stack spacing={5}>
         <Typography variant="h4" sx={{ textAlign: "left", fontWeight: "bold" }}>
           Contact
