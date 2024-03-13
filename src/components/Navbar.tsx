@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Drawer,
+  Grid,
   IconButton,
   List,
   ListItem,
@@ -14,30 +15,17 @@ import {
 } from "@mui/material";
 
 import { useState } from "react";
+import ToggleColorMode from "./utility/ToggleColorMode";
 
 const drawerWidth = 240;
-const navItems = ["Home", "Projects", "Skills", "About Me", "Contact"];
+const navItems = ["Home", "Projects", "Skills", "About", "Contact"];
+// TODO: Add anchor links
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const handleDrawerToggle = () => {
     setDrawerOpen((prevState) => !prevState);
   };
-
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "left" }}>
-              <ListItemText primary={item} />
-              {/* TODO: Add anchor links */}
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
 
   return (
     <Box sx={{ display: "flex" }} color="">
@@ -52,22 +40,35 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            PORTFOLIO
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "black" }}>
-                {item}
-              </Button>
-            ))}
-          </Box>
+
+          <Grid container justifyContent="space-between" alignItems="center">
+            <Grid item>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+              >
+                PORTFOLIO
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Box>
+                <Box sx={{ display: { xs: "none", sm: "inline" } }}>
+                  {navItems.map((item) => (
+                    <Button key={item}>
+                      <Typography variant="body2" color="default">
+                        {item}
+                      </Typography>
+                    </Button>
+                  ))}
+                </Box>
+                <ToggleColorMode />
+              </Box>
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
+
       <Box component="nav">
         <Drawer
           variant="temporary"
@@ -84,7 +85,17 @@ const Navbar = () => {
             },
           }}
         >
-          {drawer}
+          <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+            <List>
+              {navItems.map((item) => (
+                <ListItem key={item} disablePadding>
+                  <ListItemButton sx={{ textAlign: "left" }}>
+                    <ListItemText primary={item} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
         </Drawer>
       </Box>
     </Box>
