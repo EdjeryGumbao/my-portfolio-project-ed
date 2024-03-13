@@ -25,7 +25,7 @@ const Projects = () => {
   };
 
   return (
-    <Stack>
+    <Stack py={10}>
       <SectionTitle text="Explore My Projects!" />
       <Container maxWidth={"xs"}>
         <Paper elevation={5}>
