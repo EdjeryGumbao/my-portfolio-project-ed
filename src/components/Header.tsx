@@ -1,5 +1,5 @@
 import { Box, Divider, Grid, Typography } from "@mui/material";
-import headerPerson from "../assets/header-person.png";
+import headerPerson from "../assets/Images/header-person.png";
 
 const Header = () => {
   return (
