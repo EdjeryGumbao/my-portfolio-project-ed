@@ -32,7 +32,7 @@ const Skills = () => {
         Skills
       </Typography>
 
-      <Paper elevation={10}>
+      <Paper elevation={10} sx={{ p: 3 }}>
         <Stack direction="row">
           <ListItemButton onClick={handleFirstCol}>
             <ListItemIcon>
