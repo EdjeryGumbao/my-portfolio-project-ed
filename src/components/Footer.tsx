@@ -4,12 +4,7 @@ const iconSize = "large";
 
 const Footer = () => {
   return (
-    <Box
-      sx={{ bgcolor: "lightblue", textAlign: "center" }}
-      px={5}
-      py={5}
-      mt={20}
-    >
+    <Box sx={{ textAlign: "center" }} px={5} py={5} mt={20}>
       <Stack spacing={2}>
         <Box>
           <IconButton
