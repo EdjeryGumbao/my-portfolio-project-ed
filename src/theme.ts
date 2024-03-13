@@ -5,18 +5,21 @@ const theme = (themeMode: PaletteMode) =>
     palette: {
       mode: themeMode,
       primary: {
-        main: themeMode === "dark" ? "#fff" : "#333",
+        main: themeMode === "dark" ? "#D4D3FF" : "#1C004C",
       },
       secondary: {
         main: themeMode === "dark" ? "#5000DC" : "#1C004C",
       },
       background: {
-        default: themeMode === "dark" ? "#15161D" : "#E9F1FA",
-        paper: themeMode === "dark" ? "#15161D" : "#DBE7F5",
+        default: themeMode === "dark" ? "#1A1A2A" : "#E9EBFA",
+        paper: themeMode === "dark" ? "#0B0B26" : "#D2D9FF",
       },
       text: {
-        primary: themeMode === "dark" ? "#fff" : "#333",
-        secondary: themeMode === "dark" ? "#C1C1C1" : "#666",
+        primary: themeMode === "dark" ? "#D4D3FF" : "#1C004C",
+        secondary: themeMode === "dark" ? "#8E8CB7" : "#403650",
+      },
+      info: {
+        main: themeMode === "dark" ? "#6970AD" : "#C8CDF4",
       },
     },
   });
