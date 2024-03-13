@@ -19,7 +19,7 @@ const theme = (themeMode: PaletteMode) =>
         secondary: themeMode === "dark" ? "#8E8CB7" : "#403650",
       },
       info: {
-        main: themeMode === "dark" ? "#6970AD" : "#C8CDF4",
+        main: themeMode === "dark" ? "#6970AD" : "#6C7FBD",
       },
     },
   });
