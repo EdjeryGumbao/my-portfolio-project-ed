@@ -6,7 +6,7 @@ const Header = () => {
     <Box>
       <Box sx={{ bgcolor: "info.main" }}>
         <Grid container alignItems="center" pl={10}>
-          <Grid item xs={12} lg={5}>
+          <Grid item xs={10} lg={5}>
             <Box
               sx={{
                 display: "flex",
@@ -21,7 +21,7 @@ const Header = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={12} lg={7}>
+          <Grid item xs={10} lg={7}>
             <Box
               sx={{ textAlign: { xs: "center", md: "left" }, my: { xs: 5 } }}
             >
