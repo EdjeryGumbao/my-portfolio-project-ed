@@ -8,11 +8,11 @@ import {
   ListItemText,
   Paper,
   Stack,
-  Typography,
 } from "@mui/material";
 import { useState } from "react";
 import skillDataList from "../data/skillDataList";
 import SkillsCollapsableContent from "./SkillsCollapsableContent";
+import SectionTitle from "./common/SectionTitle";
 
 const Skills = () => {
   const [open1stCol, setOpen1stCol] = useState(true);
@@ -28,9 +28,7 @@ const Skills = () => {
   };
   return (
     <Stack spacing={5}>
-      <Typography variant="h4" sx={{ textAlign: "center", fontWeight: "bold" }}>
-        Skills
-      </Typography>
+      <SectionTitle text="Skills" />
 
       <Paper elevation={10} sx={{ p: 3 }}>
         <Stack direction="row">

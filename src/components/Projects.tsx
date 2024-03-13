@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import websiteList from "../data/websiteList";
+import SectionTitle from "./common/SectionTitle";
 
 const Projects = () => {
   const [activeImage, setActiveImage] = useState(0);
@@ -25,12 +26,7 @@ const Projects = () => {
 
   return (
     <Stack>
-      <Typography
-        variant="h4"
-        sx={{ mb: 10, textAlign: "center", fontWeight: "bold" }}
-      >
-        Explore My Projects!
-      </Typography>
+      <SectionTitle text="Explore My Projects!" />
       <Container maxWidth={"xs"}>
         <Paper elevation={5}>
           <Typography p={2}>{websiteList[activeImage].label}</Typography>

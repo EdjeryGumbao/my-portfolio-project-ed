@@ -9,14 +9,14 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import SectionTitle from "./common/SectionTitle";
 
 const Contact = () => {
   return (
     <Box>
+      <SectionTitle text="Contact Me" />
+
       <Stack spacing={5}>
-        <Typography variant="h4" sx={{ textAlign: "left", fontWeight: "bold" }}>
-          Contact
-        </Typography>
         <Typography variant="h6">
           Got questions or inquiries? Don't hesitate to reach out!
         </Typography>
