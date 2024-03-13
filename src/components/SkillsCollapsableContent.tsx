@@ -7,15 +7,17 @@ interface Props {
   data: ISkillData;
 }
 
+const leftPadding = { xs: 2, md: 5 };
+
 const SkillsCollapsableContent = ({ open, data }: Props) => {
   return (
     <Collapse in={open} timeout="auto" unmountOnExit>
-      <Box pl={5}>
+      <Box pl={leftPadding}>
         {data.content.map((main) => (
           <ListItemText
             primary={<ListItemWithIcon name={main.header} icon={main.icon} />}
             secondary={
-              <Box pl={5}>
+              <Box pl={leftPadding}>
                 <Grid container>
                   {main.content.map((item) => (
                     <Grid item xs={6}>
@@ -24,7 +26,7 @@ const SkillsCollapsableContent = ({ open, data }: Props) => {
                           <ListItemWithIcon name={item.name} icon={item.icon} />
                         }
                         secondary={
-                          <Box pl={5}>
+                          <Box pl={leftPadding}>
                             {item.content.length !== 0
                               ? item.content.map((subItem) => (
                                   <ListItemText
