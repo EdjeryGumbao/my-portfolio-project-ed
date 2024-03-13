@@ -42,7 +42,6 @@ import virtualEnvIcon from "../assets/SkillsIcon/virtual-guest.svg";
 import frontEndIcon from "../assets/SkillsIcon/website-1.svg";
 import fullStackIcon from "../assets/SkillsIcon/website.svg";
 import webDevIcon from "../assets/SkillsIcon/window-restore.svg";
-import dotIcon from "../assets/SkillsIcon/dot.png";
 
 export interface ISkillData {
   header: string;
@@ -255,12 +254,12 @@ const skillDataList: ISkillData[] = [
         content: [
           {
             name: "Building complete web-based applications with integrated systems.",
-            icon: dotIcon,
+            icon: "",
             content: [],
           },
           {
             name: "Manage already existing web-based applications.",
-            icon: dotIcon,
+            icon: "",
             content: [],
           },
         ],
@@ -271,7 +270,7 @@ const skillDataList: ISkillData[] = [
         content: [
           {
             name: "Creating engaging landing pages and promotional websites.",
-            icon: dotIcon,
+            icon: "",
             content: [],
           },
         ],
@@ -280,8 +279,8 @@ const skillDataList: ISkillData[] = [
         header: "Back-end",
         icon: backEndIcon,
         content: [
-          { name: "Develop APIs", icon: dotIcon, content: [] },
-          { name: "Manage databases", icon: dotIcon, content: [] },
+          { name: "Develop APIs", icon: "", content: [] },
+          { name: "Manage databases", icon: "", content: [] },
         ],
       },
       {

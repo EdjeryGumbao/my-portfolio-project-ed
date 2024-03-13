@@ -3,11 +3,10 @@ import EmojiObjectsOutlinedIcon from "@mui/icons-material/EmojiObjectsOutlined";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import {
-  Box,
-  List,
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Paper,
   Stack,
   Typography,
 } from "@mui/material";
@@ -28,20 +27,12 @@ const Skills = () => {
     if (open1stCol) setOpen1stCol(false);
   };
   return (
-    <Box>
+    <Stack spacing={5}>
       <Typography variant="h4" sx={{ textAlign: "center", fontWeight: "bold" }}>
         Skills
       </Typography>
-      <List
-        sx={{
-          width: "100%",
-          maxWidth: "70rem",
-          bgcolor: "background.paper",
-          textAlign: "center",
-          margin: "auto",
-        }}
-        component="nav"
-      >
+
+      <Paper elevation={10}>
         <Stack direction="row">
           <ListItemButton onClick={handleFirstCol}>
             <ListItemIcon>
@@ -61,8 +52,8 @@ const Skills = () => {
 
         <SkillsCollapsableContent open={open1stCol} data={skillDataList[1]} />
         <SkillsCollapsableContent open={open2ndCol} data={skillDataList[0]} />
-      </List>
-    </Box>
+      </Paper>
+    </Stack>
   );
 };
 

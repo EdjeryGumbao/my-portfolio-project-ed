@@ -12,7 +12,7 @@ const theme = (themeMode: PaletteMode) =>
       },
       background: {
         default: themeMode === "dark" ? "#15161D" : "#E9F1FA",
-        paper: themeMode === "dark" ? "#15161D" : "#E9F1FA",
+        paper: themeMode === "dark" ? "#15161D" : "#DBE7F5",
       },
       text: {
         primary: themeMode === "dark" ? "#fff" : "#333",
@@ -22,6 +22,3 @@ const theme = (themeMode: PaletteMode) =>
   });
 
 export default theme;
-
-// light mode Light blue (#E9F1FA), bright blue (#00ABE4), white (#FFFFFF)
-// dark mode Neon blue (#2272FF), black (#1D1D1)
