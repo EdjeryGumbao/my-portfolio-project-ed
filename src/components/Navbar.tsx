@@ -14,8 +14,8 @@ import {
 } from "@mui/material";
 
 import { useState } from "react";
-import ScrollToSectionButton from "./utility/ScrollToSectionButton";
-import ToggleColorMode from "./utility/ToggleColorMode";
+import ScrollToSectionButton from "./ui/ScrollToSectionButton";
+import ToggleColorMode from "./ui/ToggleColorMode";
 
 const drawerWidth = 240;
 const navItems = ["Home", "Projects", "Skills", "About", "Contact"];
