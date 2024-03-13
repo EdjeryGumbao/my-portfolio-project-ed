@@ -34,14 +34,14 @@ const Skills = () => {
         <Stack direction="row">
           <ListItemButton onClick={handleFirstCol}>
             <ListItemIcon>
-              <EmojiObjectsOutlinedIcon />
+              <EmojiObjectsOutlinedIcon color="primary" />
             </ListItemIcon>
             <ListItemText primary={skillDataList[1].header} />
             {open1stCol ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <ListItemButton onClick={handleSecondCol}>
             <ListItemIcon>
-              <BusinessCenterOutlinedIcon />
+              <BusinessCenterOutlinedIcon color="primary" />
             </ListItemIcon>
             <ListItemText primary={skillDataList[0].header} />
             {open2ndCol ? <ExpandLess /> : <ExpandMore />}
