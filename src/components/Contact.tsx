@@ -47,7 +47,12 @@ const Contact = () => {
               multiline
               rows={5}
             />
-            <Button type="submit" variant="contained" endIcon={<SendIcon />}>
+            <Button
+              type="submit"
+              variant="contained"
+              endIcon={<SendIcon />}
+              color="secondary"
+            >
               Submit
             </Button>
           </Stack>
