@@ -5,6 +5,7 @@ import {
   Link,
   MobileStepper,
   Paper,
+  Stack,
   Typography,
 } from "@mui/material";
 import { useState } from "react";
@@ -23,37 +24,24 @@ const Projects = () => {
   };
 
   return (
-    <Box>
+    <Stack>
       <Typography
         variant="h4"
         sx={{ mb: 10, textAlign: "center", fontWeight: "bold" }}
       >
         Explore My Projects!
       </Typography>
-      <Container maxWidth="xs">
-        <Paper
-          square
-          elevation={0}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            height: 50,
-            pl: 2,
-            bgcolor: "gray",
-            color: "white",
-          }}
-        >
-          <Typography>{websiteList[activeImage].label}</Typography>
+      <Container maxWidth={"xs"}>
+        <Paper elevation={5}>
+          <Typography p={2}>{websiteList[activeImage].label}</Typography>
         </Paper>
         <Link href={websiteList[activeImage].link} target="_blank">
-          <Box sx={{ height: 250, maxWidth: 400, width: "100%" }}>
-            <Box
-              component="img"
-              alt="Image"
-              src={websiteList[activeImage].img}
-              sx={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </Box>
+          <Box
+            component="img"
+            alt="Image"
+            src={websiteList[activeImage].img}
+            sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
         </Link>
         <MobileStepper
           variant="text"
@@ -80,7 +68,7 @@ const Projects = () => {
           }
         />
       </Container>
-    </Box>
+    </Stack>
   );
 };
 
