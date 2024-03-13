@@ -5,16 +5,14 @@ import {
   Drawer,
   Grid,
   IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
+  Stack,
   Toolbar,
   Typography,
 } from "@mui/material";
 
 import { useState } from "react";
 import ScrollToSectionButton from "./ui/ScrollToSectionButton";
+import ScrollToSectionListItemButton from "./ui/ScrollToSectionListItemButton";
 import ToggleColorMode from "./ui/ToggleColorMode";
 
 const drawerWidth = 240;
@@ -28,11 +26,11 @@ const Navbar = () => {
   };
 
   return (
-    <Box sx={{ display: "flex" }} color="">
-      <AppBar component="nav" color="default">
+    <Box>
+      <AppBar component="nav" sx={{ bgcolor: "background.default" }}>
         <Toolbar>
           <IconButton
-            color="inherit"
+            color="primary"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -45,8 +43,8 @@ const Navbar = () => {
             <Grid item>
               <Typography
                 variant="h6"
-                component="div"
                 sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+                color="primary"
               >
                 PORTFOLIO
               </Typography>
@@ -81,16 +79,13 @@ const Navbar = () => {
             },
           }}
         >
-          <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-            <List>
+          <Box onClick={handleDrawerToggle} textAlign="center">
+            <Typography my={3}>Welcome to my Portfolio!</Typography>
+            <Stack spacing={2}>
               {navItems.map((item) => (
-                <ListItem key={item} disablePadding>
-                  <ListItemButton sx={{ textAlign: "left" }}>
-                    <ListItemText primary={item} />
-                  </ListItemButton>
-                </ListItem>
+                <ScrollToSectionListItemButton sectionId={item} text={item} />
               ))}
-            </List>
+            </Stack>
           </Box>
         </Drawer>
       </Box>

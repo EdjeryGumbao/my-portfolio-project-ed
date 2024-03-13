@@ -1,11 +1,11 @@
-import { Button } from "@mui/material";
+import { ListItemButton } from "@mui/material";
 
 interface Props {
   sectionId: string;
   text: string;
 }
 
-const ScrollToSectionButton = ({ sectionId, text }: Props) => {
+const ScrollToSectionListItemButton = ({ sectionId, text }: Props) => {
   const scrollToSection = () => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -14,10 +14,10 @@ const ScrollToSectionButton = ({ sectionId, text }: Props) => {
   };
 
   return (
-    <Button onClick={scrollToSection} color="primary">
+    <ListItemButton onClick={scrollToSection} color="primary">
       {text}
-    </Button>
+    </ListItemButton>
   );
 };
 
-export default ScrollToSectionButton;
+export default ScrollToSectionListItemButton;
