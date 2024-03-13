@@ -1,10 +1,10 @@
 import {
   Box,
   CssBaseline,
+  PaletteMode,
   Stack,
   ThemeProvider,
   Toolbar,
-  createTheme,
 } from "@mui/material";
 import { useMemo, useState } from "react";
 import About from "./components/About";
@@ -15,9 +15,10 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import ColorModeContext from "./context/ColorModeContext";
+import theme from "./theme";
 
 function App() {
-  const [mode, setMode] = useState<"light" | "dark">("dark");
+  const [mode, setMode] = useState<PaletteMode>("dark");
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
@@ -26,20 +27,11 @@ function App() {
     }),
     []
   );
-
-  const theme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-      }),
-    [mode]
-  );
+  const chosenTheme = useMemo(() => theme(mode), [mode]);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={chosenTheme}>
         <Box>
           <CssBaseline />
           <Box component="div" id="Home">
