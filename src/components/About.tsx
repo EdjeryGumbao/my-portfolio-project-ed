@@ -1,5 +1,5 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
-import headerPerson from "../assets/Images/header-person.png";
+import aboutImage from "../assets/Images/about-image.png";
 import SectionTitle from "./common/SectionTitle";
 
 const paragraphStyle = {
@@ -43,8 +43,8 @@ const About = () => {
           <Box
             component="img"
             alt="header-person"
-            src={headerPerson}
-            sx={{ maxWidth: 400, objectFit: "cover" }}
+            src={aboutImage}
+            sx={{ maxHeight: 500, objectFit: "cover" }}
           />
         </Grid>
       </Grid>
