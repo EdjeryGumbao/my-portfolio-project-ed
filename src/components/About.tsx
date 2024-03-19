@@ -22,7 +22,7 @@ const About = () => {
       <SectionTitle text="About Me" />
 
       <Grid container spacing={10}>
-        <Grid item xs={12} my={6} lg={6}>
+        <Grid item xs={12} lg={6} my={6}>
           <Stack spacing={5}>
             <Typography variant="body1" sx={paragraphStyle}>
               I'm Edjery Gumbao, a passionate {BoldSpan(" software developer ")}
@@ -39,12 +39,12 @@ const About = () => {
             </Typography>
           </Stack>
         </Grid>
-        <Grid item xs={12} md={6} lg={6}>
+        <Grid item xs={12} lg={6} sx={{textAlign: "center"}}>
           <Box
             component="img"
-            alt="header-person"
+            alt="about-image"
             src={aboutImage}
-            sx={{ maxHeight: 500, objectFit: "cover" }}
+            sx={{ width: "100%", height: "auto", objectFit: "cover" }}
           />
         </Grid>
       </Grid>
